@@ -43,7 +43,7 @@ public class SwerveModule {
     }
 
     private void calculateAndSetAngle(int goal) {
-        int diff = Math.abs(this.m_rotationTalon.getSelectedSensorPosition(0) - goal)
+        int diff = Math.abs(this.m_rotationTalon.getSelectedSensorPosition(0) - goal);
         int dist = diff > SwerveConstants.kEncoderPulsesPerRadian ? SwerveConstants.kEncoderPulsesPerRevolution - diff : diff;
 
         // If true, must invert angle
